@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Invoice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cointainer">
+        <div class="form_box">
+            <h1>
+                Invoice
+            </h1>
+            <hr>
+            <form id="form">
+                <div class="part_one">
+                    <div class="form_control">
+                        <label for="cust_name">Name :-</label>
+                        <input type="text" id="cust_name" name="cust_name"  oninput="validateTextInput(this)" required maxlength="30">
+                        <div class="error" id="name_error"></div>
+                    </div>
+                    <div class="form_control">
+                        <label for="cust_mob">Mobile :-</label>
+                        <input type="text" id="cust_mob" name="cust_mob"  required   oninput="validateNumberInput(this)"
+                            maxlength="10">
+                    </div>
+                    <div class="form_control">
+                        <label for="date">Date :-</label>
+                        <input type="date" name="date" id="date" >
+                    </div>
+                    <div class="form_control">
+                        <label for="product">Product :-</label>
+                        <select name="product" id="product">
+                            <option selected>Select</option>
+                            <option value="Caffè Americano">Caffè Americano</option>
+                            <option value="Cappuccino">Cappuccino</option>
+                            <option value="Dragon Drink">Dragon Drink</option>
+                            <option value="Flat White">Flat White</option>
+                            <option value="Iced Matcha Tea Latte">Iced Matcha Tea Latte</option>
+                            <option value="Hot Chocolate">Hot Chocolate</option>
+                            <option value="Pink Drink">Pink Drink</option>
+                         </select>
+                    </div>
+                    <div class="form_control">
+                        <label for="quantity">Quantity :-</label>
+                        <input type="number" id="quantity" name="quantity" required max="999">
+                    </div>
+                    <div class="form_control">
+                        <label for="product_rate">Price :-</label>
+                        <input type="text" id="product_rate" name="product_rate" required maxlength="9999">
+                        
+                    </div>
+
+                    <div class="form_control">
+                        <button id="submit_invoice" type="button" onclick="Addrow()">Add Product</button>
+                    </div>
+
+                </div>
+            </form>
+            
+            <div class="invoice_table">
+                  <h2>Invoice Table</h2>
+                <table class="table" id="show_table" >
+                    
+                        <thead>
+                            <tr>
+                                <th>Sr. No</th>
+                                <th>Product</th>
+                                <th>Rate</th>
+                                <th>Qty</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    
+                    </table>
+
+                    <div class="grand_total">
+                        <label for="total_amount">Grand Total :</label>
+                       <input type="number" id="total_amount" name="total_amount" readonly>
+                    </div>
+                    <div class="button_control">
+                        <button id="Gen_invoice" type="button" onclick="redirectToInvoicePage()">Generate Invoice</button>
+                    </div>
+            </div>
+
+            <div2 id="invoice-details">
+                <h2>Invoice Details</h2>
+                <hr>
+                <p><strong>Name:</strong> <span id="name"></span></p>
+                <p><strong>Mobile:</strong> <span id="mobile"></span></p>
+                <p><strong>Invoice Date:</strong> <span id="invoiceDate"></span></p>
+                <p><strong>Invoice Number:</strong><span id="invoiceNumber"></span></p>
+                <p><strong>Total Distinct Products:</strong> <span id="totalDistinctProducts"></span></p>
+                <p><strong>Grand Total:</strong> <span id="grandTotal"></span></p>
+        
+                <button id="printButton">Print Invoice</button>
+            </div2>
+
+        </div>
+    </div>
+    
+ <script src="script.js"></script>
+</body>
+
+</html>

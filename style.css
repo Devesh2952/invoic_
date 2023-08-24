@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ccc;
+}
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.form_box{
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+label{
+    padding: 2px 2px;
+
+}
+input{
+    margin-top: 5px;
+    padding: 2px 5px;
+}
+
+.form_control{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding:5px;
+    margin: 5px 5px;
+    
+  }
+
+  table{
+    width: 100%;
+  }
+   
+  #submit_invoice{
+            width: 40%;
+        }
+  .invoice_table{
+    margin-top: 20px;
+  }      
+
+  .invalid {
+    border: 2px solid red;
+}
+
+#total_amount{
+  width: 150px;
+  text-align: center;
+}
+
+.button_control {
+  display: flex;
+  justify-content: right; /* Align to the left */
+  margin-top: 20px; /* Adjust as needed */
+}
+
+#Gen_invoice {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#Gen_invoice:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+
+
+#Gen_invoice {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#Gen_invoice:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.grand_total {
+    display: flex;
+    justify-content: flex-start; /* Align to the right */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.grand_total label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#total_amount {
+    font-size: 14px;
+    padding: 3px 7px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: #f0f0f0;
+}
+
+#invoice-details {
+  display: block;
+  max-width: 600px;
+    margin: 0 auto;
+  margin-top: 50px; /* Add spacing from the top of the page */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Style for the "Print Invoice" button */
+#printButton {
+  display: block;
+  margin-top: 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#printButton:hover {
+  background-color: #2980b9;
+}
+
